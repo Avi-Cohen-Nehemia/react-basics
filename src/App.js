@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
+import Header from "./components/Header";
 
 const App = () => {
-  let message = "Hello world!";
   return (
     <>
-      <h1 className="alert alert-primary">{ message }</h1>
+      <Header />
     </>
   );
 }
