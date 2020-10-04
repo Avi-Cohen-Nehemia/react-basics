@@ -15,7 +15,9 @@ const Stuff = () => {
             <Square
                 color={ "green" }
             />
-            <People />
+            <People
+                names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
+            />
         </>
     )
 }
