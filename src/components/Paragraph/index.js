@@ -1,18 +1,18 @@
 import React from "react";
 import propTypes from 'prop-types';
 
-const Paragraph = ({ message }) => {
+const Paragraph = ({ children }) => {
     return (
-        <p>{ message }</p>
+        <p>{ children }</p>
     )
 }
 
 Paragraph.defaultProps = {
-    message: "Hello world",
+    children: "Hello world",
 }
 
 Paragraph.propTypes = {
-    message: propTypes.string,
+    children: propTypes.string,
 }
 
 export default Paragraph;
