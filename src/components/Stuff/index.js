@@ -10,7 +10,9 @@ const Stuff = () => {
             <Header
                 text={ "Hello Wrold!" }
             />
-            <Paragraph />
+            <Paragraph
+                message={ "not a default message" }
+            />
             <Square />
             <People />
         </>
