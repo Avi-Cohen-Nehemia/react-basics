@@ -3,8 +3,12 @@ import propTypes from 'prop-types';
 
 const Paragraph = ({ message }) => {
     return (
-        <p>{ message ? message : "Hello world" }</p>
+        <p>{ message }</p>
     )
+}
+
+Paragraph.defaultProps = {
+    message: "Hello world",
 }
 
 Paragraph.propTypes = {
