@@ -5,6 +5,7 @@ import Square from './../Square';
 import Paragraph from './../Paragraph';
 import People from './../People';
 import Basket from './../Basket';
+import FadeIn from "./../FadeIn";
 
 const Stuff = ({ square }) => {
     return (
@@ -25,6 +26,7 @@ const Stuff = ({ square }) => {
                     { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
                 ] }
             />
+            <FadeIn time={ "3000ms" }>Hello</FadeIn>
         </>
     )
 }

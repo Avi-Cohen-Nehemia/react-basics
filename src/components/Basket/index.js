@@ -4,7 +4,7 @@ import BasktItem from './BasketItem';
 
 const Basket = ({ items }) => {
     return (
-        <table class="table table-striped table-dark">
+        <table className="table table-striped table-dark">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -18,6 +18,7 @@ const Basket = ({ items }) => {
                     price={ item.price }
                     name={ item.name }
                     index={ index + 1 }
+                    key={ index }
                 />
                 ) }
             </tbody>
