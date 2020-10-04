@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 const Paragraph = ({ message }) => {
     return (
-        <p>{ message }</p>
+        <p>{ message ? message : "Hello world" }</p>
     )
 }
 

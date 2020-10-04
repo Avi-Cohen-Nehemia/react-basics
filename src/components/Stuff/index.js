@@ -8,11 +8,10 @@ const Stuff = () => {
     return (
         <>
             <Header
+                // props are variables we pass down to a component to use
                 text={ "Hello Wrold!" }
             />
-            <Paragraph
-                message={ "not a default message" }
-            />
+            <Paragraph />
             <Square />
             <People />
         </>
