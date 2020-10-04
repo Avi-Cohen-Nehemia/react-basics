@@ -12,7 +12,9 @@ const BasketItem = ({ name, price, index }) => {
 }
 
 BasketItem.propTypes = {
-    items: propTypes.array,
+    name: propTypes.string,
+    price: propTypes.number,
+    index: propTypes.number
 }
 
 export default BasketItem;
