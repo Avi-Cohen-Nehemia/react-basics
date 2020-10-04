@@ -12,7 +12,9 @@ const Stuff = () => {
                 text={ "Hello Wrold!" }
             />
             <Paragraph />
-            <Square />
+            <Square
+                color={ "green" }
+            />
             <People />
         </>
     )
