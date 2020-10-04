@@ -4,6 +4,7 @@ import Header from './../Header';
 import Square from './../Square';
 import Paragraph from './../Paragraph';
 import People from './../People';
+import Basket from './../Basket';
 
 const Stuff = ({ square }) => {
     return (
@@ -15,6 +16,14 @@ const Stuff = ({ square }) => {
             <People
                 // props are variables we pass down to a component to use
                 names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
+            />
+            <Basket
+                items={ [
+                    { name: "Coffee", price: 2.10 },
+                    { name: "Bananas", price: 3.50 },
+                    { name: "Milk", price: 250.65 },
+                    { name: "The Great Milk Shortage by Simon Schama", price: 12.99 },
+                ] }
             />
         </>
     )
