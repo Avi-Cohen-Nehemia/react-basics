@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ text }) => {
     return (
-        <h1 className="alert alert-primary">Hello Wrold!</h1>
+        <h1 className="alert alert-primary">{ text }</h1>
     )
 }
 
