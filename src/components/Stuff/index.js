@@ -1,10 +1,11 @@
 import React from "react";
-import Header from './../Header'
-import Square from './../Square'
-import Paragraph from './../Paragraph'
-import People from './../People'
+import propTypes from 'prop-types';
+import Header from './../Header';
+import Square from './../Square';
+import Paragraph from './../Paragraph';
+import People from './../People';
 
-const Stuff = () => {
+const Stuff = ({ square }) => {
     return (
         <>
             <Header
@@ -12,14 +13,25 @@ const Stuff = () => {
                 text={ "Hello Wrold!" }
             />
             <Paragraph />
-            <Square
-                color={ "green" }
-            />
+            { square ?
+                <Square
+                    color={ "green" }
+                />
+            : null }
+            
             <People
                 names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
             />
         </>
     )
+}
+
+Stuff.defaultProps = {
+    square: true,
+}
+
+Stuff.propTypes = {
+    square: propTypes.bool,
 }
 
 export default Stuff;
