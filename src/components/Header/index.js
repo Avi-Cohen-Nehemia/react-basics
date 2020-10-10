@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const Header = ({ children }) => {
     return (
-        <h1 className="alert alert-primary">{ children }</h1>
+        <header onClick={() => console.log("hi")}>
+            <h1 className="alert alert-primary">{ children }</h1>
+        </header>
     )
 }
 
