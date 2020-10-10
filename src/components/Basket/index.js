@@ -26,8 +26,8 @@ const Basket = ({ items }) => {
     )
 }
 
-Basket.PropTypes = {
-    items: propTypes.array,
+Basket.propTypes = {
+    items: PropTypes.array,
 }
 
 export default Basket;
