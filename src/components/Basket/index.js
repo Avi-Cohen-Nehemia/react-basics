@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import BasktItem from './BasketItem';
 
 const Basket = ({ items }) => {
@@ -26,7 +26,7 @@ const Basket = ({ items }) => {
     )
 }
 
-Basket.propTypes = {
+Basket.PropTypes = {
     items: propTypes.array,
 }
 

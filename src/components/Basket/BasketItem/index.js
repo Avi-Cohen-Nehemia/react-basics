@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const BasketItem = ({ name, price, index }) => {
     return (
@@ -12,9 +12,9 @@ const BasketItem = ({ name, price, index }) => {
 }
 
 BasketItem.propTypes = {
-    name: propTypes.string,
-    price: propTypes.number,
-    index: propTypes.number
+    name: PropTypes.string,
+    price: PropTypes.number,
+    index: PropTypes.number
 }
 
 export default BasketItem;
