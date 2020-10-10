@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Header from './../Header';
 import Square from './../Square';
 import Paragraph from './../Paragraph';
@@ -36,7 +36,7 @@ Stuff.defaultProps = {
 }
 
 Stuff.propTypes = {
-    square: propTypes.bool,
+    square: PropTypes.bool,
 }
 
 export default Stuff;

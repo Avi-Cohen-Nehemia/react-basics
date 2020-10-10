@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Paragraph = ({ children }) => {
     return (
@@ -12,7 +12,7 @@ Paragraph.defaultProps = {
 }
 
 Paragraph.propTypes = {
-    children: propTypes.string,
+    children: PropTypes.string,
 }
 
 export default Paragraph;

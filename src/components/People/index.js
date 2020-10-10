@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const People = ({ names }) => {
     return (
@@ -14,7 +14,7 @@ const People = ({ names }) => {
 }
 
 People.propTypes = {
-    names: propTypes.array,
+    names: PropTypes.array,
 }
 
 export default People;

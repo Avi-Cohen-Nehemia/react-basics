@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FadeIn = ({ time, children }) => {
     return (
@@ -12,7 +12,7 @@ const FadeIn = ({ time, children }) => {
 }
 
 FadeIn.propTypes = {
-    time: propTypes.string,
+    time: PropTypes.string,
 }
 
 export default FadeIn;

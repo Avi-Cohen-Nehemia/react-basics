@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Square = ({ color }) => {
     return (
@@ -18,7 +18,7 @@ Square.defaultProps = {
 }
 
 Square.propTypes = {
-    color: propTypes.string,
+    color: PropTypes.string,
 }
 
 export default Square;
