@@ -25,12 +25,12 @@ class Header extends Component {
     render() {
         // we can destructur props inside the render method when using class based components
         const { children } = this.props;
-        
+
         // we can destructur state inside the render method when using class based components
         const { counter } = this.state;
 
         return (
-            // pass methods into events
+            // pass methods into event handlers
             <header onClick={this.handleClick}>
                 <h1 className="alert alert-primary">{children}</h1>
                 <p>Counter: {counter}</p>
