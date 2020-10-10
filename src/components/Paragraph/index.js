@@ -1,10 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
-const Paragraph = ({ children }) => {
-    return (
-        <p>{ children }</p>
-    )
+class Paragraph extends Component {
+    render() {
+        const { children } = this.props;
+        return (
+            <p>{children}</p>
+        );
+    }
 }
 
 Paragraph.defaultProps = {
