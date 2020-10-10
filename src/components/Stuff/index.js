@@ -8,6 +8,7 @@ import Basket from './../Basket';
 import FadeIn from './../FadeIn';
 import Clicked from './../Clicked';
 import ToggleText from './../ToggleText';
+import Counter from './../Counter';
 
 const Stuff = ({ square }) => {
     return (
@@ -33,6 +34,10 @@ const Stuff = ({ square }) => {
             <ToggleText
                 initial={ 'Hello' }
                 alternate={ 'World' }
+            />
+            <Counter
+                initial={ 50 }
+                max={ 100 }
             />
         </>
     )
