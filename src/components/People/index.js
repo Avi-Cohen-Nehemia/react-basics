@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 const People = ({ names }) => {
     return (
         names ? (
-        <ul className="list-group">
+        <ul
+            className="list-group"
+            onClick={() => console.log("Hello, world")}
+        >
             { names.map((name, index) => (
                 <li className="list-group-item" key={ index }>{ name }</li>
             ))}
