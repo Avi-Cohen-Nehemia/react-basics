@@ -12,6 +12,7 @@ class Header extends Component {
     }
     // a method we can pass to our event handlers in the render method
     handleClick() {
+        // we don't have to but it is good practice to store our state in variables before using them in setState
         let currentCounter = this.state.counter
         this.setState({counter: currentCounter + 1});
     }
