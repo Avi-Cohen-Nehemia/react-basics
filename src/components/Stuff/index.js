@@ -6,6 +6,7 @@ import Paragraph from './../Paragraph';
 import People from './../People';
 import Basket from './../Basket';
 import FadeIn from "./../FadeIn";
+import Clicked from './../Clicked'
 
 const Stuff = ({ square }) => {
     return (
@@ -27,6 +28,7 @@ const Stuff = ({ square }) => {
                 ] }
             />
             <FadeIn time={ "3000ms" }>Hello</FadeIn>
+            <Clicked />
         </>
     )
 }
