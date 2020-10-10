@@ -14,7 +14,7 @@ const Stuff = ({ square }) => {
             { /* any value we pass into a component that is not defined as a prop will be regarded as the 'children' prop */}
             <Header>Hello world!</Header>
             <Paragraph>I am the "children" prop!</Paragraph>
-            { square ? <Square color={ "green" } /> : null }
+            { square ? <Square color={"hotpink"} /> : null }
             <People
                 // props are variables we pass down to a component to use
                 names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
