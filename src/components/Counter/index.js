@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class ToggleText extends Component {
+class Counter extends Component {
     constructor(props) {
         super(props)
 
@@ -16,12 +16,16 @@ class ToggleText extends Component {
     handleIncrement() {
         const { max } = this.props;
         let currentCounter = this.state.counter;
-        this.setState({ counter: currentCounter < max ? currentCounter : currentCounter + 1 });
+        if (currentCounter < max) {
+            this.setState({ counter: currentCounter + 1 });
+        }
     }
 
     handleDecrement() {
         let currentCounter = this.state.counter;
-        this.setState({ counter: currentCounter > 0 ? currentCounter : currentCounter - 1 });
+        if (currentCounter > 0) {
+            this.setState({ counter: currentCounter - 1 });
+        }
     }
 
     render() {
@@ -36,14 +40,14 @@ class ToggleText extends Component {
     }
 }
 
-ToggleText.defaultProps = {
+Counter.defaultProps = {
     initial: 50,
     max: 100,
 }
 
-ToggleText.propTypes = {
+Counter.propTypes = {
     initial: PropTypes.number,
     max: PropTypes.number
 }
 
-export default ToggleText;
+export default Counter;

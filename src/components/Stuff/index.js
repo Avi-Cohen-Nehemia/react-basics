@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from './../Header';
-import Square from './../Square';
-import Paragraph from './../Paragraph';
-import People from './../People';
-import Basket from './../Basket';
-import FadeIn from './../FadeIn';
-import Clicked from './../Clicked';
-import ToggleText from './../ToggleText';
-import Counter from './../Counter';
+import Header from '../Header';
+import Square from '../Square';
+import Paragraph from '../Paragraph';
+import People from '../People';
+import Basket from '../Basket';
+import FadeIn from '../FadeIn';
+import Clicked from '../Clicked';
+import ToggleText from '../ToggleText';
+import Counter from '../Counter';
+import StepCounter from '../StepCounter';
 
 const Stuff = ({ square }) => {
     return (
@@ -38,6 +39,10 @@ const Stuff = ({ square }) => {
             <Counter
                 initial={ 50 }
                 max={ 100 }
+            />
+            <StepCounter
+                max={ 100 }
+                step={ 5 }
             />
         </>
     )
