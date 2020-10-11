@@ -10,6 +10,7 @@ import Clicked from '../Clicked';
 import ToggleText from '../ToggleText';
 import Counter from '../Counter';
 import StepCounter from '../StepCounter';
+import CatchMeIfYouCan from '../CatchMeIfYouCan';
 
 const Stuff = ({ square }) => {
     return (
@@ -43,6 +44,9 @@ const Stuff = ({ square }) => {
             <StepCounter
                 max={ 100 }
                 step={ 5 }
+            />
+            <CatchMeIfYouCan
+                jump={ 100 }
             />
         </>
     )
