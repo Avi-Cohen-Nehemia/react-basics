@@ -11,6 +11,7 @@ import ToggleText from '../ToggleText';
 import Counter from '../Counter';
 import StepCounter from '../StepCounter';
 import CatchMeIfYouCan from '../CatchMeIfYouCan';
+import RollCall from '../RollCall';
 
 const Stuff = ({ square }) => {
     return (
@@ -47,6 +48,9 @@ const Stuff = ({ square }) => {
             />
             <CatchMeIfYouCan
                 jump={ 100 }
+            />
+            <RollCall
+                names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
             />
         </>
     )
