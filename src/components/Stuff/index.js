@@ -12,6 +12,7 @@ import Counter from '../Counter';
 import StepCounter from '../StepCounter';
 import CatchMeIfYouCan from '../CatchMeIfYouCan';
 import RollCall from '../RollCall';
+import Colors from '../Colors';
 
 const Stuff = ({ square }) => {
     return (
@@ -51,6 +52,9 @@ const Stuff = ({ square }) => {
             />
             <RollCall
                 names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
+            />
+            <Colors
+                colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
             />
         </>
     )
