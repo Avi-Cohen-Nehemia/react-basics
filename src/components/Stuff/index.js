@@ -17,6 +17,7 @@ import Length from './../Length';
 import PasswordStrength from './../PasswordStrength';
 import TempConvertor from './../TempConvertor';
 import List from './../List';
+import Adder from './../Adder';
 
 const Stuff = ({ square }) => {
     return (
@@ -64,6 +65,7 @@ const Stuff = ({ square }) => {
             <PasswordStrength />
             <TempConvertor />
             <List />
+            <Adder />
         </>
     )
 }
