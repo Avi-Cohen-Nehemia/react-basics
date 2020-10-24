@@ -16,10 +16,10 @@ class Fields extends Component {
     }
 
     handleChange(e, index) {
-        let values = this.state.values.slice();
+        let values = this.state.values;
         values[index] = e.currentTarget.value;
 
-        this.setState({ values });
+        this.setState({ values: values });
     }
 
     handleSubmit(e) {
@@ -45,8 +45,8 @@ class Fields extends Component {
                                 className={ "form-control" + (!submitted || values[index] !== "" ? "" : " is-invalid")}
                                 type='text'
                             />
+                            { !submitted || values[index] !== "" ? null : <p className="invalid-feedback">{`${field} is required`}</p>}
                         </div>
-                        { !submitted || values[index] !== "" ? null : <p className="invalid-feedback">{`${field} is required`}</p>}
                     </div>
                 ))}
             </form>
