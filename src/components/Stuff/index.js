@@ -18,10 +18,12 @@ import PasswordStrength from './../PasswordStrength';
 import TempConvertor from './../TempConvertor';
 import List from './../List';
 import Adder from './../Adder';
+import Transform from './../Transform';
+import Fields from './../Fields';
 
 const Stuff = ({ square }) => {
     return (
-        <>
+        <div className='container ml-4'>
             { /* any value we pass into a component that is not defined as a prop will be regarded as the 'children' prop */}
             <Header>Hello world!</Header>
             <Paragraph>I am the 'children' prop!</Paragraph>
@@ -66,7 +68,11 @@ const Stuff = ({ square }) => {
             <TempConvertor />
             <List />
             <Adder />
-        </>
+            <Transform transform={ x  => x * x }/>
+            <Transform transform={ x  => x + x }/>
+            <Transform transform={ x  => x / 2 }/>
+            <Fields fields ={ ["First Name", "Last Name", "Email"] }/>
+        </div>
     )
 }
 
