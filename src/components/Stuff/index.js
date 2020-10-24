@@ -15,6 +15,7 @@ import RollCall from './../RollCall';
 import Colors from './../Colors';
 import Length from './../Length';
 import PasswordStrength from './../PasswordStrength';
+import TempConvertor from './../TempConvertor';
 
 const Stuff = ({ square }) => {
     return (
@@ -60,6 +61,7 @@ const Stuff = ({ square }) => {
             />
             <Length />
             <PasswordStrength />
+            <TempConvertor />
         </>
     )
 }
