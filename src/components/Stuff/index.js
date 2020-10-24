@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header';
-import Square from '../Square';
-import Paragraph from '../Paragraph';
-import People from '../People';
-import Basket from '../Basket';
-import FadeIn from '../FadeIn';
-import Clicked from '../Clicked';
-import ToggleText from '../ToggleText';
-import Counter from '../Counter';
+import Header from './../Header';
+import Square from './../Square';
+import Paragraph from './../Paragraph';
+import People from './../People';
+import Basket from './../Basket';
+import FadeIn from './../FadeIn';
+import Clicked from './../Clicked';
+import ToggleText from './../ToggleText';
+import Counter from './../Counter';
 import StepCounter from '../StepCounter';
-import CatchMeIfYouCan from '../CatchMeIfYouCan';
-import RollCall from '../RollCall';
-import Colors from '../Colors';
-import Length from '../Length';
+import CatchMeIfYouCan from './../CatchMeIfYouCan';
+import RollCall from './../RollCall';
+import Colors from './../Colors';
+import Length from './../Length';
+import PasswordStrength from './../PasswordStrength';
 
 const Stuff = ({ square }) => {
     return (
@@ -58,6 +59,7 @@ const Stuff = ({ square }) => {
                 colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
             />
             <Length />
+            <PasswordStrength />
         </>
     )
 }

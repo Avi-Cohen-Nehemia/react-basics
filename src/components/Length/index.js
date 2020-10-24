@@ -20,9 +20,9 @@ class Length extends Component {
 
         return (
             <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for='input'>{`input length: ${inputValue.length}`}</label>
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor='input'>{`input length: ${inputValue.length}`}</label>
                         <input
                             id='input'
                             value={inputValue}
