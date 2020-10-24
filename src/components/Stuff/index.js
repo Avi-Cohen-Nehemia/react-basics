@@ -16,6 +16,7 @@ import Colors from './../Colors';
 import Length from './../Length';
 import PasswordStrength from './../PasswordStrength';
 import TempConvertor from './../TempConvertor';
+import List from './../List';
 
 const Stuff = ({ square }) => {
     return (
@@ -62,6 +63,7 @@ const Stuff = ({ square }) => {
             <Length />
             <PasswordStrength />
             <TempConvertor />
+            <List />
         </>
     )
 }
