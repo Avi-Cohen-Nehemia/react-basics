@@ -13,6 +13,7 @@ import StepCounter from '../StepCounter';
 import CatchMeIfYouCan from '../CatchMeIfYouCan';
 import RollCall from '../RollCall';
 import Colors from '../Colors';
+import Length from '../Length';
 
 const Stuff = ({ square }) => {
     return (
@@ -56,6 +57,7 @@ const Stuff = ({ square }) => {
             <Colors
                 colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
             />
+            <Length />
         </>
     )
 }
