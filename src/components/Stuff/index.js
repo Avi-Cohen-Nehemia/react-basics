@@ -90,11 +90,11 @@ const Stuff = ({ square }) => {
                 />
             </Route>
 
-            <Route exact path='/catch-me-if-you-can'>
-                <CatchMeIfYouCan
-                    jump={ 100 }
-                />
-            </Route>
+            {/* we can make a component's props change by passing values to the url */}
+            <Route
+                exact path='/catch-me-if-you-can/:jump'
+                render={({ match }) => <CatchMeIfYouCan jump={ match.params.jump }/>}
+            />
 
             <Route exact path='/roll-call'>
                 <RollCall
