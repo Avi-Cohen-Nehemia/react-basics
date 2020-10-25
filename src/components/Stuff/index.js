@@ -31,57 +31,90 @@ const Stuff = ({ square }) => {
             { /* any value we pass into a component that is not defined as a prop will be regarded as the 'children' prop */}
             <Header>Hello world!</Header>
 
-            <Route>
+            <Route exect path='/paragraph'>
                 <Paragraph>I am the 'children' prop!</Paragraph>
             </Route>
-            { square ? <Square color={ 'hotpink' } /> : null }
-            <People
-                // props are variables we pass down to a component to use
-                names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
-            />
-            <Basket
-                items={ [
-                    { name: 'Coffee', price: 2.10 },
-                    { name: 'Bananas', price: 3.50 },
-                    { name: 'Milk', price: 250.65 },
-                    { name: 'The Great Milk Shortage by Simon Schama', price: 12.99 },
-                ] }
-            />
-            <FadeIn time={ '3000ms' }>Hello</FadeIn>
+
+            <Route exact path='/square'>
+                { square ? <Square color={ 'hotpink' } /> : null }
+            </Route>
+
+            <Route exact path='/people'>
+                <People
+                    // props are variables we pass down to a component to use
+                    names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
+                />
+            </Route>
+
+            <Route exact path='/basket'>
+                <Basket
+                    items={ [
+                        { name: 'Coffee', price: 2.10 },
+                        { name: 'Bananas', price: 3.50 },
+                        { name: 'Milk', price: 250.65 },
+                        { name: 'The Great Milk Shortage by Simon Schama', price: 12.99 },
+                    ] }
+                />
+            </Route>
+
+            <Route exact path='/fade-in'>
+                <FadeIn time={ '3000ms' }>Hello</FadeIn>
+            </Route>
 
             {/* we can pass a component that have no props in the 'component' prop of the Route
              the path prop is used to specify the url that will appear when visiting this component
              pass the 'exact' prop to prevent similar routes from directing to wrong pages */}
             <Route exact path='/clicked' component={ Clicked }/>
             
-             {/* when a Route needs to have multiple components or the component its routing to
+            {/* when a Route needs to have multiple components or the component its routing to
              has props we need to wrap them in Route like done below */}
-            <ToggleText
-                initial={ 'Hello' }
-                alternate={ 'World' }
-            />
-            <Counter
-                initial={ 50 }
-                max={ 100 }
-            />
-            <StepCounter
-                max={ 100 }
-                step={ 5 }
-            />
-            <CatchMeIfYouCan
-                jump={ 100 }
-            />
-            <RollCall
-                names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
-            />
-            <Colors
-                colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
-            />
+            <Route exact path='/toggle-text'>
+                <ToggleText
+                    initial={ 'Hello' }
+                    alternate={ 'World' }
+                />
+            </Route>
+
+            {/* examples for routing components that have props or children */}
+            <Route exact path='/counter'>
+                <Counter
+                    initial={ 50 }
+                    max={ 100 }
+                />
+            </Route>
+
+            <Route exact path='/step-counter'>
+                <StepCounter
+                    max={ 100 }
+                    step={ 5 }
+                />
+            </Route>
+
+            <Route exact path='/catch-me-if-you-can'>
+                <CatchMeIfYouCan
+                    jump={ 100 }
+                />
+            </Route>
+
+            <Route exact path='/roll-call'>
+                <RollCall
+                    names={ ['Zoe', 'Hillary', 'Matt', 'Richard', 'Alice', 'Erica', 'Danielle', 'Avi'] }
+                />
+            </Route>
+
+            <Route exact path='/colors'>
+                <Colors
+                    colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
+                />
+            </Route>
+
+            {/* examples for routing propless components*/}
             <Route path='/length' component={ Length }/>
             <Route path='/password-srength' component={ PasswordStrength }/>
             <Route path='/temp-convertor' component={ TempConvertor }/>
             <Route path='/list' component={ List }/>
             <Route path='/adder' component={ Adder }/>
+
             <Transform transform={ x  => x * x }/>
             <Transform transform={ x  => x + x }/>
             <Transform transform={ x  => x / 2 }/>
