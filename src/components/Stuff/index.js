@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+// import components
 import Header from './../Header';
 import Square from './../Square';
 import Paragraph from './../Paragraph';
