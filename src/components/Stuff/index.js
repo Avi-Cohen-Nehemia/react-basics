@@ -27,10 +27,13 @@ import Fields from './../Fields';
 
 const Stuff = ({ square }) => {
     return (
-        <div className='container ml-4'>
+        <Router className='container ml-4'>
             { /* any value we pass into a component that is not defined as a prop will be regarded as the 'children' prop */}
             <Header>Hello world!</Header>
-            <Paragraph>I am the 'children' prop!</Paragraph>
+
+            <Route>
+                <Paragraph>I am the 'children' prop!</Paragraph>
+            </Route>
             { square ? <Square color={ 'hotpink' } /> : null }
             <People
                 // props are variables we pass down to a component to use
@@ -45,7 +48,14 @@ const Stuff = ({ square }) => {
                 ] }
             />
             <FadeIn time={ '3000ms' }>Hello</FadeIn>
-            <Clicked />
+
+            {/* we can pass a component that have no props in the 'component' prop of the Route
+             the path prop is used to specify the url that will appear when visiting this component
+             pass the 'exact' prop to prevent similar routes from directing to wrong pages */}
+            <Route exact path='/clicked' component={ Clicked }/>
+            
+             {/* when a Route needs to have multiple components or the component its routing to
+             has props we need to wrap them in Route like done below */}
             <ToggleText
                 initial={ 'Hello' }
                 alternate={ 'World' }
@@ -67,16 +77,16 @@ const Stuff = ({ square }) => {
             <Colors
                 colors={ ["#C14412", "#EBB31A", "#8F5318", "#009EAD", "#395967",] }
             />
-            <Length />
-            <PasswordStrength />
-            <TempConvertor />
-            <List />
-            <Adder />
+            <Route path='/length' component={ Length }/>
+            <Route path='/password-srength' component={ PasswordStrength }/>
+            <Route path='/temp-convertor' component={ TempConvertor }/>
+            <Route path='/list' component={ List }/>
+            <Route path='/adder' component={ Adder }/>
             <Transform transform={ x  => x * x }/>
             <Transform transform={ x  => x + x }/>
             <Transform transform={ x  => x / 2 }/>
             <Fields fields ={ ["First Name", "Last Name", "Email"] }/>
-        </div>
+        </Router>
     )
 }
 
